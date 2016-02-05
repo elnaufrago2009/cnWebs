@@ -10,6 +10,7 @@ var app = angular.module('cnWebs', [
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider){
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
+  $stateProvider
   .state('inicio', {
     url: '/',
     views: {
@@ -18,5 +19,4 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider){
       'footer': { templateUrl: 'layout/theme/footer.html' }      
     }
   })
-})
-
+});
