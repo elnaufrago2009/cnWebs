@@ -1,0 +1,15 @@
+<h1 class="page-header">Portafolio Admin <small><a href="#/portafolio_admin/nuevo">Nuevo</a> </small></h1>
+<table class="table table-striped">
+	<tr>
+		<th>Nombre</th>		
+		<th>Acciones</th>
+	</tr>
+	<tr ng-repeat="portafolio in portafolios">
+		<td>{{portafolio.nombre}} </td>
+		<td>
+			<a href="#/portafolio_admin/ver/{{portafolio.$id}}" class="btn btn-default btn-sm">Ver</a>
+			<a href="#/portafolio_admin/editar/{{portafolio.$id}}" class="btn btn-default btn-sm">Editar</a>
+			<a href="" ng-click="eliminar(portafolio);" class="btn btn-default btn-sm">Eliminar</a>
+		</td>		
+	</tr>
+</table>

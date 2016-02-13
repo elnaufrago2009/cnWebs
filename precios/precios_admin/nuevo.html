@@ -1,0 +1,60 @@
+<h1 class="page-header">Nuevo Plan</h1>
+<form ng-submit="nuevo(precio);" class="form-horizontal">
+	<div class="form-group">
+		<label class="control-label col-lg-2">Nombre</label>
+		<div class="col-lg-3">
+			<input class="form-control" type="text" placeholder="Nombre del plan" ng-model="precio.nombre">
+		</div>
+		<label class="control-label col-lg-1">Precio</label>
+		<div class="col-lg-2">
+			<input class="form-control" type="number" placeholder="300" ng-model="precio.precio">			
+		</div>	
+	</div>
+	<div class="form-group">
+		<label class="control-label col-lg-2">Opcion 1</label>
+		<div class="col-lg-3">
+			<input class="form-control" type="text" placeholder="Atributo 1" ng-model="precio.atributo1">			
+		</div>
+		<div class="col-lg-3">
+			<input class="form-control" type="text" placeholder="Respuesta 1" ng-model="precio.respuesta1">			
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-lg-2">Opcion 2</label>
+		<div class="col-lg-3">
+			<input class="form-control" type="text" placeholder="Atributo 2" ng-model="precio.atributo2">			
+		</div>
+		<div class="col-lg-3">
+			<input class="form-control" type="text" placeholder="Respuesta 2" ng-model="precio.respuesta2">			
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-lg-2">Opcion 3</label>
+		<div class="col-lg-3">
+			<input class="form-control" type="text" placeholder="Atributo 3" ng-model="precio.atributo3">			
+		</div>
+		<div class="col-lg-3">
+			<input class="form-control" type="text" placeholder="Respuesta 3" ng-model="precio.respuesta3">			
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-lg-2">Opcion 4</label>
+		<div class="col-lg-3">
+			<input class="form-control" type="text" placeholder="Atributo 4" ng-model="precio.atributo4">
+		</div>
+		<div class="col-lg-3">
+			<input class="form-control" type="text" placeholder="Respuesta 4" ng-model="precio.respuesta4">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-lg-2">Precio</label>
+		<div class="col-lg-2">
+			<input class="form-control" type="text" placeholder="tiempo" ng-model="precio.tiempo">			
+		</div>		
+	</div>
+	<div class="form-group">
+		<div class="col-lg-offset-2 col-lg-3">
+			<button type="submit" class="btn btn-default">Guardar</button>
+		</div>
+	</div>
+</form>

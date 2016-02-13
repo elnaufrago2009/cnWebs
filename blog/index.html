@@ -1,0 +1,17 @@
+<h1>Blog <small>Ultimos</small></h1>
+<div class="row">
+	<div class="col-lg-8" infinite-scroll="blogs.scroll.next(4)" infinite-scroll-distance="0">
+		<div ng-repeat="blog in blogs" >
+			<h1><a href="#/blog/{{blog.$id}}">{{blog.titulo}}</a></h1>
+			<p><span class="glyphicon glyphicon-time"></span> {{blog.created_at | date:'yyyy-MM-dd HH:mm:ss'}} </p>
+			<p><img ng-src="{{blog.imagen}}"></p>
+      		<p class="lead">{{blog.resumen}}</p>
+      		<hr>
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="well">
+			<h1>Categorias</h1>
+		</div>
+	</div>
+</div>

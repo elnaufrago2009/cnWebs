@@ -1,0 +1,39 @@
+<h1>Nuevo Integrante Equipo</h1>
+<hr>
+<form ng-submit="guardar(equipo);" class="form-horizontal">
+	<div class="form-group">
+		<label class="control-label col-lg-2">Nombre</label>
+		<div class="col-lg-4">
+            <input type="text" class="form-control" placeholder="Nombre Completo" ng-model="equipo.nombre_completo">
+		</div>		
+	</div>
+    <div class="form-group">
+		<label class="control-label col-lg-2">Nombre Resumido</label>
+		<div class="col-lg-3">
+            <input type="text" class="form-control" placeholder="Nombre Resumido" ng-model="equipo.nombre_resumido">
+		</div>		
+	</div>
+    <div class="form-group">
+		<label class="control-label col-lg-2">Cargo</label>
+		<div class="col-lg-3">
+            <input type="text" class="form-control" placeholder="Cargo" ng-model="equipo.cargo">
+		</div>		
+	</div>
+    <div class="form-group">
+		<label class="control-label col-lg-2">Foto</label>
+		<div class="col-lg-6">
+            <input type="text" class="form-control" placeholder="Url Foto" ng-model="equipo.foto_url">
+		</div>		
+	</div>
+    <div class="form-group">
+		<label class="control-label col-lg-2">Contenido</label>
+		<div class="col-lg-6">
+            <textarea class="form-control" placeholder="Contenido" rows="5" ng-model="equipo.contenido"></textarea>
+		</div>		
+	</div>
+    <div class="form-group">		
+		<div class="col-lg-offset-2 col-lg-4">
+            <button type="submit" class="btn btn-default">Registrar</button>
+		</div>		
+	</div>
+</form>

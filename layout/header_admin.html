@@ -1,0 +1,29 @@
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/blog_admin">Administrador</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li ng-class="{active: url == '#/inicio_admin'}"><a href="#/inicio_admin">inicio</a></li>
+            <li ng-class="{active: url == '/blog_admin'}"><a href="#/blog_admin">Blog</a></li>
+            <li ng-class="{active: url == '/precios_admin'}"><a href="#/precios_admin">Precios</a></li>
+            <li ng-class="{active: url == '/portafolio_admin'}"><a href="#/portafolio_admin">Portafolio</a></li>
+            <li ng-class="{active: url == '/equipo_admin'}"><a href="#/equipo_admin">Equipo</a></li>            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/">Ver Sitio</a></li>        
+            <li ng-class="{active: url == '/login'}">
+              <a href="" ng-click="unlogin()" ng-show="status">{{authData.password.email}}, Salir?</a>
+              <a href="/login" ng-hide="status">Login</a>                    
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>

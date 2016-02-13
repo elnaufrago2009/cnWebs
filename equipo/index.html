@@ -1,0 +1,44 @@
+<h1 class="page-header">{{inicio.titulo}} </h1>
+<p class="lead">{{inicio.resumen}} </p>
+<p>
+    <a href="#/quienes_somos" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mas.</a>
+</p>
+
+<h1 class="page-header">Equipo de Trabajo</h1>
+<div class="row">
+    <style type="text/css">
+        h1{
+        font-size:4.5em;
+        }
+
+        p{
+         font-weight:400;
+         font-size:3em;   
+        }
+
+         .img-quadrata {
+               border-radius:50%;
+               width:250px;
+               height:250px;
+        }
+
+        h3{
+                font-weight:800;
+                color:#f0ad4e;
+                font-size:2em;  
+        }
+        small{
+                text-align:center;
+                font-size:1.5em; 
+                text-decoration:underline;
+                color:gray;
+        }
+    </style>
+
+    <div class="col-md-4" ng-repeat="equipo in equipos">
+        <a href="#/equipo/{{equipo.$id}}"> <img ng-src="{{equipo.foto_url}}" class="img-quadrata center-block" > </a>
+        <h3 class="text-center" ><a href="#/equipo/{{equipo.$id}}"> {{equipo.nombre_resumido}}</a>
+        <br/>
+        <small>{{equipo.cargo}} </small></h3>
+    </div>
+</div>

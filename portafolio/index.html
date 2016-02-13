@@ -1,0 +1,14 @@
+<h1 class="page-header">Portafolio <small>Ultimos Proyectos</small></h1>
+
+<div class="row">
+  <div class="col-lg-3" ng-repeat="portafolio in portafolios">
+    <div class="thumbnail">
+      <img ng-src="{{portafolio.image3}}">
+      <div class="caption">
+        <h3>{{portafolio.nombre}} </h3>
+        <p>{{portafolio.resumen}} </p>
+        <p><a href="#/portafolio/{{portafolio.$id}}" class="btn btn-primary" role="button">Ver Mas</a></p>
+      </div>
+    </div>
+  </div>
+</div>

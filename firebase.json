@@ -1,0 +1,9 @@
+{
+  "firebase": "cnwebs",
+  "public": "../cnwebs",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

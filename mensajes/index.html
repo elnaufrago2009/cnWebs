@@ -1,0 +1,26 @@
+<h1>Mensajes</h1>
+<form ng-submit="enviar(mensaje);">
+	<div class="row">
+		<div class="col-lg-10">
+			<div class="form-group">		
+				<textarea class="form-control input-lg" ng-model="mensaje.contenido" placeholder="Escribir mensaje"></textarea>
+			</div>		
+		</div>
+		<div class="col-lg-2">
+			<button type="submit" class="btn btn-default">Enviar</button>
+	</div>	
+</form>
+<p class="clearfix"></p>
+
+<div infinite-scroll="mensajes.scroll.next(4)" infinite-scroll-distance="0">
+	<blockquote ng-repeat="mensaje in mensajes | orderBy:'-created_at'">
+		  <p>
+		  	<strong>moises@gmail.com</strong> <br>
+		  	{{mensaje.contenido}}
+		  </p>
+		</blockquote>
+	</div>
+</div>
+		
+
+

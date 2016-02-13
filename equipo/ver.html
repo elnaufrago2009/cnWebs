@@ -1,0 +1,17 @@
+<h1 class="page-header text-center">{{equipo.nombre_completo}}</h1>
+<ol class="breadcrumb">
+  <li><a href="#/">Inicio</a></li>
+  <li><a href="#/equipo">Equipo</a></li>
+  <li class="active">{{equipo.nombre_completo}} </li>
+</ol>
+<p class="text-center"><img ng-src="{{equipo.foto_url}}" class="img-responsive img-thumbnail" style="with: 400px;"></p>
+<blockquote class="text-center">
+	<footer>Nombre</footer>
+  	<p>{{equipo.nombre_completo}} </p>  
+  	<footer>Nombre Corto</footer>
+  	<p>{{equipo.nombre_resumido}} </p> 
+  	<footer>Cargo</footer>
+  	<p>{{equipo.cargo}} </p>
+  	<footer>Contenido</footer>
+  	<p>{{equipo.contenido}} </p> 
+</blockquote>

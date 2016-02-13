@@ -1,0 +1,23 @@
+<h1>Lista del Equipo <small><a href="#/equipo_admin/nuevo">Nuevo</a></small></h1>
+
+<ol class="breadcrumb">
+  <li><a href="#">Inicio</a></li>  
+  <li class="active">Equipos</li>
+</ol>
+
+<table class="table table-striped">
+    <tr>
+        <th>Nombre</th>
+        <th>Cargo</th>
+        <th>Accciones</th>
+    </tr>
+    <tr ng-repeat="equipo in equipos">
+        <td>{{equipo.nombre_completo}} </td>
+        <td>{{equipo.cargo}} </td>
+        <td>
+            <a href="#/equipo_admin/ver/{{equipo.$id}}" class="btn btn-default btn-sm">Ver</a>
+            <a href="#/equipo_admin/editar/{{equipo.$id}}" class="btn btn-default btn-sm">Editar</a>
+            <a href="" class="btn btn-default btn-sm" ng-click="eliminar(equipo);">Eliminar</a>
+        </td>
+    </tr>
+</table>

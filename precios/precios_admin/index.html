@@ -1,0 +1,21 @@
+<h1 class="page-header">Precios y planes <small><a href="#/precios_admin/nuevo">Nuevo</a></small></h1>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Precio</th>
+			<th>Acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="precio in precios">
+			<td>{{precio.nombre}} </td>
+			<td>{{precio.precio}} por {{precio.tiempo}} </td>
+			<td>
+				<a href="#/precios_admin/ver/{{precio.$id}}" class="btn btn-default btn-sm">Ver</a>
+				<a href="#/precios_admin/editar/{{precio.$id}}" class="btn btn-default btn-sm">Editar</a>
+				<a href="" ng-click="eliminar(precio);" class="btn btn-default btn-sm">Eliminar</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
