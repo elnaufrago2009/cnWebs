@@ -10,4 +10,7 @@ app.controller('inicioCtrl', function ($scope, $firebaseArray, $firebaseObject) 
 
 	ref_portafolios = new Firebase('https://cnwebs.firebaseio.com/portafolios');
 	$scope.portafolios = $firebaseArray(ref_portafolios.limit(4));
+
+	ref_blog = new Firebase('https://cnwebs.firebaseio.com/blogs');
+	$scope.blogs = $firebaseArray(ref_blog.limit(2));
 });

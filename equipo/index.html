@@ -5,38 +5,11 @@
 </p>
 
 <h1 class="page-header">Equipo de Trabajo</h1>
-<div class="row">
-    <style type="text/css">
-        h1{
-        font-size:4.5em;
-        }
+<div class="row">    
 
-        p{
-         font-weight:400;
-         font-size:3em;   
-        }
-
-         .img-quadrata {
-               border-radius:50%;
-               width:250px;
-               height:250px;
-        }
-
-        h3{
-                font-weight:800;
-                color:#f0ad4e;
-                font-size:2em;  
-        }
-        small{
-                text-align:center;
-                font-size:1.5em; 
-                text-decoration:underline;
-                color:gray;
-        }
-    </style>
-
-    <div class="col-md-4" ng-repeat="equipo in equipos">
-        <a href="#/equipo/{{equipo.$id}}"> <img ng-src="{{equipo.foto_url}}" class="img-quadrata center-block" > </a>
+    <div class="col-md-4 text-center" ng-repeat="equipo in equipos">
+        <a href="#/equipo/{{equipo.$id}}"> 
+        <img ng-src="{{equipo.foto_url}}" class="img-quadrata img-circle" > </a>
         <h3 class="text-center" ><a href="#/equipo/{{equipo.$id}}"> {{equipo.nombre_resumido}}</a>
         <br/>
         <small>{{equipo.cargo}} </small></h3>

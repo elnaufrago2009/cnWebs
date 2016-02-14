@@ -1,17 +1,45 @@
+<style type="text/css" media="screen">
+	#blog_title {
+		color:  #FF8400;
+	}
+	#blog_categorias {
+		color:  #7D7D7D;
+	}
+	#categoria_title {
+		color:  #525252;
+		font-size: 15px;
+		line-height: 2px;
+	}
+	#ultimos_post_title {
+		color:  #525252;
+		font-size: 15px;
+		line-height: 23px;
+	}
+</style>
+<ol class="breadcrumb" style="margin-top: 20px;">
+  <li><a href="#/">Inicio</a></li>
+  <li><a href="#/blog">Blog</a></li>
+  <li class="active">Listado</li>
+</ol>
+
 <h1>Blog <small>Ultimos</small></h1>
+<hr>
 <div class="row">
 	<div class="col-lg-8" infinite-scroll="blogs.scroll.next(4)" infinite-scroll-distance="0">
 		<div ng-repeat="blog in blogs" >
-			<h1><a href="#/blog/{{blog.$id}}">{{blog.titulo}}</a></h1>
-			<p><span class="glyphicon glyphicon-time"></span> {{blog.created_at | date:'yyyy-MM-dd HH:mm:ss'}} </p>
-			<p><img ng-src="{{blog.imagen}}"></p>
+			<h2><a href="#/blog/{{blog.$id}}" id="blog_title">{{blog.titulo}}</a></h2>
+			<p>
+				<span class="glyphicon glyphicon-time"></span> <strong>Fecha</strong> {{blog.created_at | date:'yyyy-MM-dd HH:mm:ss'}} 
+				<span class="glyphicon glyphicon-list-alt"></span> <strong>Categorias </strong><span ng-repeat="categoria in blog.categorias"> 
+					<a href="#/" id="blog_categorias">{{categoria}}</a>, 
+				</span>
+			</p>
+			<p><img ng-src="{{blog.imagen}}" class="img-responsive"></p>
       		<p class="lead">{{blog.resumen}}</p>
       		<hr>
 		</div>
 	</div>
 	<div class="col-lg-4">
-		<div class="well">
-			<h1>Categorias</h1>
-		</div>
+		<div ng-include src="'blog/sidepanel.html'"></div>
 	</div>
 </div>

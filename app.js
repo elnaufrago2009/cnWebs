@@ -2,7 +2,8 @@ var app = angular.module('cnWebs', [
     'ui.router',
     'ui.bootstrap',
     'firebase',
-    'infinite-scroll'
+    'infinite-scroll',
+    'ngSanitize'
   ]);
 
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider){
